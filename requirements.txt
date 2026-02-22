@@ -1,0 +1,22 @@
+# Vocal Extractor Pro v2.0 — Bağımlılıklar
+#
+# Kurulum:
+#   pip install -r requirements.txt
+#
+# NOT: onnxruntime-directml AMD / Intel / NVIDIA GPU desteği sağlar (DirectX12).
+#      GPU yoksa veya sorun çıkarsa:
+#        pip uninstall onnxruntime-directml -y
+#        pip install onnxruntime
+
+# ── Arayüz ────────────────────────────────────────────
+PyQt6>=6.8.0
+
+# ── YouTube indirme ───────────────────────────────────
+yt-dlp>=2025.1.1
+
+# ── Ses işleme (torch gerektirmez) ────────────────────
+onnxruntime-directml>=1.20.0   # AMD/Intel/NVIDIA GPU (DirectML)
+librosa>=0.10.0                # STFT / ISTFT
+soundfile>=0.12.0              # WAV okuma/yazma
+numpy>=1.26.0                  # Matris işlemleri
+scipy>=1.12.0                  # Yeniden örnekleme (librosa bağımlılığı)
